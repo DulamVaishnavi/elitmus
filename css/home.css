@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+
+
+.centered{
+    position:absolute;
+    font-family: 'Times New Roman', Times, serif;
+    top: 50px;
+    left:30%;
+    font-size: 70px;
+    color: rgb(245, 243, 160);
+    text-transform: capitalize;
+    font-family: "Oleo Script", sans-serif;
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-family: "Oleo Script", sans-serif;
+    font-size:50px;
+    
+    
+}
+header nav a:hover {
+    color: rgb(77, 77, 77);
+    background-color: rgb(255, 251, 0);
+    font-family: "Oleo Script", sans-serif;
+}
+header a {
+    color: rgb(255, 251, 0);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 12px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin-left: 1200px;
+    background-color:transparent;
+    color:rgb(245,243,160);
+    border:2px solid yellow;
+    border-radius: 10px;
+}
+.container .button{
+    position:absolute;
+    top:60%;
+    left:45%;
+    background-color: rgb(245, 243, 160);
+    color:black;
+    padding:12px 24px;
+    border:none;
+    cursor:pointer;
+    border-radius:60px;
+    text-align: center;
+}
+.container .button:hover{
+    background-color: rgb(1,50,32);
+}
+.body{
+    padding:0;
+    margin: 10px;
+    text-align: center;
+    background-color: beige;
+}
+.button{
+    border:2px solid yellow;
+    border-radius: 10px;
+    background-color:transparent;
+    color:rgb(245,243,160);
+    cursor:pointer;
+    position: relative;
+    font-family: sans-serif;
+    text-decoration-color: black;
+
+}
+.button:hover{
+    background-color: rgb(1,50,32);
+    color:black;
+}
+.button::before{
+    content:'';
+    position: absolute;
+    left:0;
+    top:50px;
+    background: transparent;
+}
+.button:hover::before{
+    background: rgb(1,50,32);
+    top:70px;
+}
+.container.myFunction{
+    position:absolute;
+    top: 30px;
+    left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .centered {
+      font-size: 40px;
+    }
+    
+    header {
+      padding: 10px 20px;
+      font-size: 30px;
+    }
+    
+    header a {
+      margin-left: 10px;
+      font-size: 16px;
+      padding: 8px;
+    }
+    
+    .container .button {
+      top: 40%;
+      left: 40%;
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+}
+
+
+  

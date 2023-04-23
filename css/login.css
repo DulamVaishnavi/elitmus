@@ -1,0 +1,94 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  height: 100%;
+}
+
+  a{
+   text-decoration:none ;
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.756);
+  }
+  
+  .center{
+    position: absolute;
+    top: 300px;;
+    left: 530px;;
+    width: 500px;
+    background:linear-gradient(rgb(31, 41, 53),rgb(5,16,28));
+    border-radius: 10px;
+    color:#b5c8db
+  }
+  .center h1{
+    text-align: center;
+    padding:0 0 20px 0;
+  }
+  .center form{
+    padding: 0 40px ;
+    box-sizing: border-box;
+  }
+  form .txt_field{
+    position: relative;
+    border-bottom: 2px solid rgb(138, 120, 120);
+    margin: 30px 0;
+  }
+  .txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  .pass{
+    margin: -5px 0 20px 5px;
+    cursor: pointer;
+  }
+  .pass:hover{
+    text-decoration: underline;
+  }
+  input[type="submit"]{
+    width:30%;
+    height: 20px;
+    border: 1px solid;
+    position: relative;
+    left: 50px;
+    border-radius: 10px;
+    background: linear-gradient(rgb(103, 38, 38),rgba(132, 80, 80, 0.482));
+    color:rgb(106, 164, 215)
+  }
+  button{
+    width:30%;
+    height: 20px;
+    border: 1px solid;
+    position: relative;
+    left: 150px;
+    border-radius: 10px;
+    background: linear-gradient(rgb(103, 38, 38),rgba(132, 80, 80, 0.482));
+    color:rgb(77, 119, 157);
+  }
+  form button{
+    position: relative;
+    left: 300px;
+    top: -20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .center {
+        max-width: 100%;
+    }
+    
+    input[type="submit"],
+    button {
+        width: 100%;
+    }
+    body {
+      background-image: url("signupbg/signupbg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+}
