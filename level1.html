@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/level1.css">
+   
+
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+<body>
+  <style>
+  body{
+    background-image: url("images/level1.jpg");
+    background-size: cover;
+  }
+
+</style>
+
+<p class="countdown" id="countdown" style="color:aquamarine;text-align:center;font-size:30px"></p>
+ 
+</div>
+<div >
+<button class="b1"onclick="typeWriter()">Clue</button></div>
+<div class="flex-container">
+  <div class="flex-box">
+    <p id="demo" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:50"></p>
+  </div>
+</div>
+
+<div class="b2">
+<label for="tbuser" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:50">Answer:</label>
+<input type="text" id="tbuser" placeholder="Decode" maxlength="12">
+
+<input type="button" id="b2" value="submit">
+
+<p class="output" id="output1"></p>
+</div>
+
+
+
+<script>
+
+const startingMinutes =2;
+let time = startingMinutes * 60;
+
+const countdownEL = document.getElementById('countdown');
+
+setInterval(updatecountdown,1000);
+function updatecountdown(){
+
+  const minutes =Math.floor(time / 60);
+  let seconds = time % 60;
+  
+  seconds = seconds < 3 ? '0' + seconds : seconds;
+  countdownEL.innerHTML =  `${minutes}:${seconds}`
+  time--;
+  if (time<=0){
+    
+    swal("Timeup!!",
+          "",
+         "warning").then(okay => {
+   if (okay) {window.location.href = "deadend.html";}});
+    
+  }
+}
+
+
+
+
+var i = 0;
+var txt = "A trail left behind as they go,These tracks are unique, they can't be mistook A paw print that belongs to a furry look.";
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+
+
+const txt1 = document.getElementById('tbuser');
+const btn1 = document.getElementById('b2');
+const out1 = document.getElementById('output1');
+
+function fun1(){
+  if (txt1.value == ('foot prints') || txt1.value == 'footprints'){
+  
+    swal( "good guess!!","go in left direction to find leo","success").then(okay => {
+      if (okay) {
+       window.location.href = "level2story.html";
+     }
+   });;
+
+  }
+
+  else{
+    swal("sorry!", "try again","warning");
+  }
+}
+
+btn1.addEventListener('click',fun1);
+
+var start_time = new Date().getTime(); // Get the current time in milliseconds
+window.addEventListener('beforeunload', function(){
+    var end_time = new Date().getTime();
+    var time_spent_ms = end_time - start_time;
+    var time_spent = new Date(time_spent_ms).toISOString().substr(11, 8); // Convert to time format (hh:mm:ss)
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        }
+    };
+    xhttp.open("POST", "level1.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("email=<?php echo $email; ?>&visited_page="+encodeURIComponent(window.location.href)+"&start_time="+start_time+"&end_time="+end_time+"&time_spent="+time_spent);
+
+});
+
+
+
+
+</script>
+
+</body>
+</html>

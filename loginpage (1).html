@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.google.com/">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <style>
+    body{
+    background-image: url("images/signupbg.jpg"); 
+    background-size: 1540px 1020px;
+   }
+  </style>
+ 
+<div class="center">
+  <h1>Login</h1>
+  <form  action = "x1_login.php" onsubmit = "return validation()" method="post">
+    <div class="txt_field">
+      
+      <label>E-mail</label> 
+      <span></span>   
+      <input type="text" id="email" name="email"required>
+    </div>
+    <div class="txt_field">
+      
+      <label>Password</label>
+      <span></span>
+      <input type="password" id="password" name="password"required>
+    </div>
+    
+    <input type="submit"  value="Login">
+  </form>
+  <form action="signup.php"><button type="submit">SIGN UP</button></form>
+</div>
+<script>  
+  function validation()  
+  {  
+      var id=document.f1.email.value;  
+      var ps=document.f1.pass.value;  
+      if(id.length=="" && ps.length=="") {  
+          alert("User Name and Password fields are empty");  
+          return false;  
+      }  
+      else  
+      {  
+          if(id.length=="") {  
+              alert("User Name is empty");  
+              return false;  
+          }   
+          if (ps.length=="") {  
+          alert("Password field is empty");  
+          return false;  
+          }  
+      }                             
+  }  
+</script>  
+</body>
+</html>
