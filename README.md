@@ -1,4 +1,7 @@
 # elitmus
+# Hosting link
+http://phpgame789.infinityfreeapp.com/
+
 
 #admin login details
 username :leo@gmail.com
@@ -14,14 +17,10 @@ In level 4 the user will be observed on his skill of finding an accurate solutio
 Four possible ways as 4 levels and with 3 deadends
 
 #Steps to set up the project
-
-
-
-
-
-
-
-
+1.Story (Theme of the project)
+2.Clues for solving puzzle and deadends
+3.HTML,CSS,JAVASCRIPT and PHP codes required for project
+4.A Datebase and the tables present in project
 
 
 #checklist of implemented features and additional features
